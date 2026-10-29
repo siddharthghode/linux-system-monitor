@@ -1,0 +1,21 @@
+# CMake build directories
+/build/
+/build-asan/
+
+# Temporary test/debug executables
+/cpu_check
+/cpu_check.cpp
+/uptime_process_check
+/uptime_process_check.cpp
+
+# Object files and libraries
+*.o
+*.a
+*.so
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
