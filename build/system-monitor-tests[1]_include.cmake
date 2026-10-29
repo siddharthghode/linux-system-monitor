@@ -1,5 +1,0 @@
-if(EXISTS "/home/sidhharth/sppu/git/linux-system-monitor/build/system-monitor-tests[1]_tests.cmake")
-  include("/home/sidhharth/sppu/git/linux-system-monitor/build/system-monitor-tests[1]_tests.cmake")
-else()
-  add_test(system-monitor-tests_NOT_BUILT system-monitor-tests_NOT_BUILT)
-endif()
