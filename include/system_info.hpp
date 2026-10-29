@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <string>
+#include <vector>
 
 struct MemoryInfo {
     std::uint64_t total_kb{};
@@ -27,6 +28,21 @@ CpuTimes read_cpu_times(
 double calculate_cpu_usage(
     const CpuTimes& previous,
     const CpuTimes& current
+);
+
+
+double read_uptime_seconds(
+    const std::string& path = "/proc/uptime"
+);
+
+
+struct ProcessInfo {
+    int pid{};
+    std::string name;
+};
+
+std::vector<ProcessInfo> read_processes(
+    const std::string& path = "/proc"
 );
 
 #endif
