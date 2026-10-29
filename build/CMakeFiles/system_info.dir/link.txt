@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsystem_info.a CMakeFiles/system_info.dir/src/memory.cpp.o
+/usr/bin/ranlib libsystem_info.a
