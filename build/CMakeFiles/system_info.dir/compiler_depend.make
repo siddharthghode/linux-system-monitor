@@ -56,12 +56,15 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
   /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
   /usr/include/c++/14/bits/stl_function.h \
   /usr/include/c++/14/bits/stl_iterator.h \
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
   /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/stl_vector.h \
   /usr/include/c++/14/bits/streambuf.tcc \
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
@@ -69,6 +72,7 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/vector.tcc \
   /usr/include/c++/14/bits/version.h \
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
@@ -105,6 +109,7 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -325,15 +330,19 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
-/home/sidhharth/sppu/git/linux-system-monitor/include/system_info.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/wctype.h:
+
+/usr/include/wchar.h:
 
 /usr/include/c++/14/bits/refwrap.h:
 
@@ -342,6 +351,12 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
 
 /usr/include/c++/14/bits/range_access.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/locale.h:
 
 /usr/include/c++/14/bits/stl_construct.h:
 
@@ -371,8 +386,6 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 
 /usr/include/c++/14/bits/codecvt.h:
 
-/usr/include/wchar.h:
-
 /usr/include/c++/14/bits/ios_base.h:
 
 /usr/include/c++/14/bits/move.h:
@@ -385,9 +398,19 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 
 /usr/include/c++/14/bits/allocator.h:
 
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/c++/14/vector:
+
 /usr/include/c++/14/backward/binders.h:
 
 /usr/include/asm-generic/int-ll64.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/c++/14/bits/hash_bytes.h:
+
+/usr/include/c++/14/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -422,12 +445,6 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/14/bits/requires_hosted.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/locale.h:
-
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
@@ -493,6 +510,8 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 
 /usr/include/stdint.h:
 
+/home/sidhharth/sppu/git/linux-system-monitor/include/system_info.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/14/bits/exception_defines.h:
@@ -513,6 +532,14 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 
 /usr/include/stdio.h:
 
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/14/bits/stl_uninitialized.h:
+
+/usr/include/c++/14/bits/stl_bvector.h:
+
+/usr/include/c++/14/bits/stl_vector.h:
+
 /usr/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
@@ -524,6 +551,8 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 /usr/include/c++/14/string:
 
 /usr/include/linux/types.h:
+
+/usr/include/c++/14/bits/vector.tcc:
 
 /usr/include/c++/14/bits/version.h:
 
@@ -624,17 +653,3 @@ CMakeFiles/system_info.dir/src/memory.cpp.o: /home/sidhharth/sppu/git/linux-syst
 /usr/include/stdlib.h:
 
 /usr/include/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/14/bits/hash_bytes.h:
-
-/usr/include/c++/14/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:

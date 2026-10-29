@@ -1,0 +1,4 @@
+/home/sidhharth/sppu/git/linux-system-monitor/build-asan/CMakeFiles/system_info.dir
+/home/sidhharth/sppu/git/linux-system-monitor/build-asan/CMakeFiles/system-monitor.dir
+/home/sidhharth/sppu/git/linux-system-monitor/build-asan/CMakeFiles/edit_cache.dir
+/home/sidhharth/sppu/git/linux-system-monitor/build-asan/CMakeFiles/rebuild_cache.dir

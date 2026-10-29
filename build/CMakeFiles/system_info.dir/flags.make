@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/sidhharth/sppu/git/linux-system-monitor/include
 
-CXX_FLAGS = -std=c++17 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -g -std=c++17 -Wall -Wextra -Wpedantic
 
