@@ -65,11 +65,13 @@ CMAKE_BINARY_DIR = /home/sidhharth/sppu/git/linux-system-monitor/build
 # The main recursive "all" target.
 all: CMakeFiles/system_info.dir/all
 all: CMakeFiles/system-monitor.dir/all
+all: CMakeFiles/system-monitor-tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/system_info.dir/codegen
 codegen: CMakeFiles/system-monitor.dir/codegen
+codegen: CMakeFiles/system-monitor-tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -79,6 +81,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/system_info.dir/clean
 clean: CMakeFiles/system-monitor.dir/clean
+clean: CMakeFiles/system-monitor-tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -88,7 +91,7 @@ clean: CMakeFiles/system-monitor.dir/clean
 CMakeFiles/system_info.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_info.dir/build.make CMakeFiles/system_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_info.dir/build.make CMakeFiles/system_info.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=6,7 "Built target system_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=11,12 "Built target system_info"
 .PHONY : CMakeFiles/system_info.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,7 +108,7 @@ system_info: CMakeFiles/system_info.dir/rule
 # codegen rule for target.
 CMakeFiles/system_info.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system_info.dir/build.make CMakeFiles/system_info.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=6,7 "Finished codegen for target system_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=11,12 "Finished codegen for target system_info"
 .PHONY : CMakeFiles/system_info.dir/codegen
 
 # clean rule for target.
@@ -144,6 +147,38 @@ CMakeFiles/system-monitor.dir/codegen:
 CMakeFiles/system-monitor.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/clean
 .PHONY : CMakeFiles/system-monitor.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/system-monitor-tests.dir
+
+# All Build rule for target.
+CMakeFiles/system-monitor-tests.dir/all: CMakeFiles/system_info.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target system-monitor-tests"
+.PHONY : CMakeFiles/system-monitor-tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/system-monitor-tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/system-monitor-tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles 0
+.PHONY : CMakeFiles/system-monitor-tests.dir/rule
+
+# Convenience name for target.
+system-monitor-tests: CMakeFiles/system-monitor-tests.dir/rule
+.PHONY : system-monitor-tests
+
+# codegen rule for target.
+CMakeFiles/system-monitor-tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sidhharth/sppu/git/linux-system-monitor/build/CMakeFiles --progress-num=6,7,8,9,10 "Finished codegen for target system-monitor-tests"
+.PHONY : CMakeFiles/system-monitor-tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/system-monitor-tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/clean
+.PHONY : CMakeFiles/system-monitor-tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

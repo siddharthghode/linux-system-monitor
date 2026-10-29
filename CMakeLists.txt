@@ -47,3 +47,26 @@ if(ENABLE_ASAN)
     )
     target_link_options(system-monitor PRIVATE -fsanitize=address)
 endif()
+
+# Google Test configuration
+enable_testing()
+
+find_package(GTest REQUIRED)
+
+add_executable(system-monitor-tests
+    tests/test_system_info.cpp
+    src/cpu.cpp
+
+    src/uptime.cpp
+    src/processes.cpp)
+
+target_link_libraries(system-monitor-tests
+    PRIVATE system_info GTest::gtest_main
+)
+
+target_compile_options(system-monitor-tests
+    PRIVATE -Wall -Wextra -Wpedantic
+)
+
+include(GoogleTest)
+gtest_discover_tests(system-monitor-tests)

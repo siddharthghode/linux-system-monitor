@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/sidhharth/sppu/git/linux-system-monitor/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -142,12 +152,26 @@ system-monitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/build
 .PHONY : system-monitor/fast
 
+#=============================================================================
+# Target rules for targets named system-monitor-tests
+
+# Build rule for target.
+system-monitor-tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 system-monitor-tests
+.PHONY : system-monitor-tests
+
+# fast build rule for target.
+system-monitor-tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/build
+.PHONY : system-monitor-tests/fast
+
 src/cpu.o: src/cpu.cpp.o
 .PHONY : src/cpu.o
 
 # target to build an object file
 src/cpu.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/cpu.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/cpu.cpp.o
 .PHONY : src/cpu.cpp.o
 
 src/cpu.i: src/cpu.cpp.i
@@ -156,6 +180,7 @@ src/cpu.i: src/cpu.cpp.i
 # target to preprocess a source file
 src/cpu.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/cpu.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/cpu.cpp.i
 .PHONY : src/cpu.cpp.i
 
 src/cpu.s: src/cpu.cpp.s
@@ -164,6 +189,7 @@ src/cpu.s: src/cpu.cpp.s
 # target to generate assembly for a file
 src/cpu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/cpu.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/cpu.cpp.s
 .PHONY : src/cpu.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -220,6 +246,7 @@ src/processes.o: src/processes.cpp.o
 # target to build an object file
 src/processes.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/processes.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/processes.cpp.o
 .PHONY : src/processes.cpp.o
 
 src/processes.i: src/processes.cpp.i
@@ -228,6 +255,7 @@ src/processes.i: src/processes.cpp.i
 # target to preprocess a source file
 src/processes.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/processes.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/processes.cpp.i
 .PHONY : src/processes.cpp.i
 
 src/processes.s: src/processes.cpp.s
@@ -236,6 +264,7 @@ src/processes.s: src/processes.cpp.s
 # target to generate assembly for a file
 src/processes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/processes.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/processes.cpp.s
 .PHONY : src/processes.cpp.s
 
 src/uptime.o: src/uptime.cpp.o
@@ -244,6 +273,7 @@ src/uptime.o: src/uptime.cpp.o
 # target to build an object file
 src/uptime.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/uptime.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/uptime.cpp.o
 .PHONY : src/uptime.cpp.o
 
 src/uptime.i: src/uptime.cpp.i
@@ -252,6 +282,7 @@ src/uptime.i: src/uptime.cpp.i
 # target to preprocess a source file
 src/uptime.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/uptime.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/uptime.cpp.i
 .PHONY : src/uptime.cpp.i
 
 src/uptime.s: src/uptime.cpp.s
@@ -260,7 +291,32 @@ src/uptime.s: src/uptime.cpp.s
 # target to generate assembly for a file
 src/uptime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor.dir/build.make CMakeFiles/system-monitor.dir/src/uptime.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/src/uptime.cpp.s
 .PHONY : src/uptime.cpp.s
+
+tests/test_system_info.o: tests/test_system_info.cpp.o
+.PHONY : tests/test_system_info.o
+
+# target to build an object file
+tests/test_system_info.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/tests/test_system_info.cpp.o
+.PHONY : tests/test_system_info.cpp.o
+
+tests/test_system_info.i: tests/test_system_info.cpp.i
+.PHONY : tests/test_system_info.i
+
+# target to preprocess a source file
+tests/test_system_info.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/tests/test_system_info.cpp.i
+.PHONY : tests/test_system_info.cpp.i
+
+tests/test_system_info.s: tests/test_system_info.cpp.s
+.PHONY : tests/test_system_info.s
+
+# target to generate assembly for a file
+tests/test_system_info.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/system-monitor-tests.dir/build.make CMakeFiles/system-monitor-tests.dir/tests/test_system_info.cpp.s
+.PHONY : tests/test_system_info.cpp.s
 
 # Help Target
 help:
@@ -270,7 +326,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... system-monitor"
+	@echo "... system-monitor-tests"
 	@echo "... system_info"
 	@echo "... src/cpu.o"
 	@echo "... src/cpu.i"
@@ -287,6 +345,9 @@ help:
 	@echo "... src/uptime.o"
 	@echo "... src/uptime.i"
 	@echo "... src/uptime.s"
+	@echo "... tests/test_system_info.o"
+	@echo "... tests/test_system_info.i"
+	@echo "... tests/test_system_info.s"
 .PHONY : help
 
 

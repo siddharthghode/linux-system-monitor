@@ -1,0 +1,12 @@
+ProcParserTest.ParsesMemoryInformation 2 0.00331818
+ProcParserTest.MissingMemoryFileThrows 2 0.00266541
+ProcParserTest.CalculatesCpuUsage 2 0.00253033
+ProcParserTest.CpuUsageIsZeroWithoutProgress 2 0.00240061
+ProcParserTest.ParsesAggregateCpuTimes 2 0.00237589
+ProcParserTest.RejectsInvalidCpuStatistics 2 0.00221217
+ProcParserTest.ParsesUptime 2 0.00266318
+ProcParserTest.RejectsNegativeUptime 2 0.00277907
+ProcParserTest.ParsesProcessNameWithSpaces 2 0.00343346
+ProcParserTest.IgnoresNonNumericDirectories 2 0.00280521
+ProcParserTest.MissingProcessDirectoryThrows 2 0.00288486
+---

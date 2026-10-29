@@ -238,6 +238,7 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
@@ -267,6 +268,7 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
@@ -276,6 +278,7 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/bits/requires_hosted.h \
   /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/std_thread.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -290,6 +293,8 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/this_thread_sleep.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -297,6 +302,7 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/bits/version.h \
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/chrono \
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
@@ -320,16 +326,19 @@ CMakeFiles/system-monitor.dir/src/main.cpp.o: /home/sidhharth/sppu/git/linux-sys
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/limits \
   /usr/include/c++/14/locale \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/ratio \
   /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/system_error \
+  /usr/include/c++/14/thread \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
@@ -941,6 +950,8 @@ CMakeFiles/system-monitor.dir/src/cpu.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
+/usr/lib/x86_64-linux-gnu/libc.so:
+
 /usr/include/c++/14/istream:
 
 CMakeFiles/system-monitor.dir/src/main.cpp.o:
@@ -1145,6 +1156,12 @@ CMakeFiles/system-monitor.dir/src/uptime.cpp.o:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
+/usr/lib/x86_64-linux-gnu/libm.so:
+
+/usr/include/c++/14/ios:
+
+/usr/include/asm-generic/int-ll64.h:
+
 /usr/include/c++/14/backward/binders.h:
 
 /usr/include/c++/14/vector:
@@ -1161,7 +1178,13 @@ CMakeFiles/system-monitor.dir/src/uptime.cpp.o:
 
 /usr/include/c++/14/bits/invoke.h:
 
+/usr/include/c++/14/bits/this_thread_sleep.h:
+
 /usr/include/c++/14/bits/move.h:
+
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
+
+/home/sidhharth/sppu/git/linux-system-monitor/src/main.cpp:
 
 /usr/include/c++/14/bits/ios_base.h:
 
@@ -1198,10 +1221,6 @@ CMakeFiles/system-monitor.dir/src/uptime.cpp.o:
 /usr/include/c++/14/bits/uses_allocator.h:
 
 /usr/include/c++/14/bits/sstream.tcc:
-
-/home/sidhharth/sppu/git/linux-system-monitor/src/main.cpp:
-
-/usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
 
 /usr/include/c++/14/bits/memoryfwd.h:
 
@@ -1349,6 +1368,8 @@ CMakeFiles/system-monitor.dir/src/uptime.cpp.o:
 
 /usr/include/c++/14/exception:
 
+/usr/include/c++/14/chrono:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -1370,6 +1391,8 @@ CMakeFiles/system-monitor.dir/src/uptime.cpp.o:
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
+
+/usr/include/c++/14/bits/std_thread.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h:
 
@@ -1409,11 +1432,31 @@ libsystem_info.a:
 
 /usr/include/c++/14/bits/locale_facets_nonio.tcc:
 
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/14/ostream:
+
+/usr/include/c++/14/bits/parse_numbers.h:
+
 /usr/include/c++/14/bits/quoted_string.h:
+
+/usr/include/c++/14/bits/unique_ptr.h:
 
 /usr/include/c++/14/ext/numeric_traits.h:
 
 /usr/include/c++/14/ctime:
+
+/usr/include/c++/14/bits/functional_hash.h:
+
+/usr/include/c++/14/limits:
+
+/usr/include/c++/14/iomanip:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/c++/14/ratio:
+
+/usr/include/c++/14/thread:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h:
 
@@ -1423,29 +1466,9 @@ libsystem_info.a:
 
 /usr/include/c++/14/bits/allocated_ptr.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/14/ostream:
-
-/usr/include/c++/14/bits/parse_numbers.h:
-
-/usr/lib/x86_64-linux-gnu/libc.so:
-
-/usr/include/c++/14/bits/unique_ptr.h:
-
-/usr/include/c++/14/bits/functional_hash.h:
-
-/usr/include/c++/14/iomanip:
-
-/usr/include/c++/14/limits:
-
 /usr/include/c++/14/codecvt:
 
 /usr/include/c++/14/ext/concurrence.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/c++/14/ratio:
 
 /usr/include/c++/14/iosfwd:
 
@@ -1456,9 +1479,3 @@ libsystem_info.a:
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
 
 /usr/lib/x86_64-linux-gnu/crti.o:
-
-/usr/include/c++/14/ios:
-
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/lib/x86_64-linux-gnu/libm.so:
